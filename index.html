@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- index.html:ゲームのページ本体。このファイルをブラウザで開くとゲームが始まる -->
+<html lang="ja">
+
+<head>
+    <!-- 文字コード(日本語が文字化けしないように UTF-8 にする) -->
+    <meta charset="UTF-8">
+    <!-- スマホでも画面の幅に合わせて表示する -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ブラウザのタブに出る題名 -->
+    <title>ランナーゲーム</title>
+    <!-- ブラウザのタブに出るアイコン(ワシの画像) -->
+    <link href="character.png" rel="icon" type="image/png">
+    <!-- 見た目の設定(style.css)を読み込む -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <!-- ゲームのプログラム(main.js)を読み込む。
+         defer をつけると、ページ(canvas など)を読み込み終わってから実行される -->
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <!-- ゲーム画面。中の絵はすべて main.js が描く。
+         width / height は描く画面の大きさ(800×300 ピクセル) -->
+    <canvas id="game" width="800" height="300"></canvas>
+    <!-- 操作の説明 -->
+    <p class="help">
+        <b>Space / ↑</b>:ジャンプ <b>↓</b>:しゃがむ
+    </p>
+    <!-- ハイスコアを 0 に戻すボタン(押したときの処理は main.js) -->
+    <button id="reset-high" type="button">ハイスコアをリセット</button>
+</body>
+
+</html>
